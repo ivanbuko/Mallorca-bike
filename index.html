@@ -2,39 +2,210 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mallorca 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mallorca 2025 · Cycling Days</title>
+
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;700;900&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
-      display: flex;
+      margin: 0;
+      font-family: 'Unbounded', Arial, sans-serif;
+      background: radial-gradient(circle at 30% 20%, #1a1f2b 0%, #0a0c0f 65%);
+      color: #e8edf5;
       min-height: 100vh;
+      display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0;
+      padding: 32px 20px;
     }
+
     .wrap {
+      width: 100%;
+      max-width: 1100px;
       text-align: center;
     }
-    a {
-      display: inline-block;
-      margin: 10px;
-      padding: 14px 22px;
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #d4922a;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 84px);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 0.95;
+    }
+
+    .sub {
+      margin: 18px auto 44px;
+      max-width: 760px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #98a2b3;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .card {
+      position: relative;
+      display: block;
+      text-align: left;
       text-decoration: none;
-      background: #d4922a;
-      color: #000;
-      border-radius: 8px;
-      font-weight: bold;
+      color: inherit;
+      background: rgba(17, 21, 29, 0.92);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 24px 22px;
+      min-height: 220px;
+      overflow: hidden;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(212,146,42,0.14),
+        transparent 38%,
+        transparent 65%,
+        rgba(136,85,238,0.08)
+      );
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212,146,42,0.4);
+      box-shadow: 0 16px 50px rgba(0,0,0,0.35);
+    }
+
+    .day {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #d4922a;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.05;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #a6afbd;
+      position: relative;
+      z-index: 1;
+    }
+
+    .meta {
+      margin-top: 18px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #667085;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: #667085;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        align-items: flex-start;
+      }
+
+      .wrap {
+        padding-top: 20px;
+      }
+
+      .card {
+        min-height: 190px;
+      }
+
+      .title {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Mallorca 2026 road cycling</h1>
-    <a href="./day1/">Day 1</a>
-    <a href="./day2/">Day 2</a>
+    <div class="eyebrow">CHZB · Mallorca april 2026</div>
+    <h1>Cycling Days</h1>
+    <div class="sub">
+      Four ride pages collected into one clean landing page. Open each day as a separate hosted webpage.
+    </div>
+
+    <div class="cards">
+      <a href="./day1/" class="card">
+        <div class="day">Day 1</div>
+        <div class="title">Warmup Ride</div>
+        <div class="desc">
+          Opening day ride. Easy flow, first kilometers, legs activation, and settling into the trip rhythm.
+        </div>
+        <div class="meta">Open page</div>
+      </a>
+
+      <a href="./day2/" class="card">
+        <div class="day">Day 2</div>
+        <div class="title">Tramuntana Traverse</div>
+        <div class="desc">
+          Port d'Andratx to Port d'Alcúdia. Full mountain crossing with route detail, weather, pacing, fueling, and GPX-style overview.
+        </div>
+        <div class="meta">127 km · mountain day</div>
+      </a>
+
+      <a href="./day3/" class="card">
+        <div class="day">Day 3</div>
+        <div class="title">Alcudia - Allaro, Orient loop</div>
+        <div class="desc">
+          Dedicated activity page with embedded Strava ride view for the third day.
+        </div>
+        <div class="meta">Embedded activity</div>
+      </a>
+
+      <a href="./day4/" class="card">
+        <div class="day">Day 4</div>
+        <div class="title">Pollenca round</div>
+        <div class="desc">
+          Coffee ride.
+        </div>
+        <div class="meta">Embedded activity</div>
+      </a>
+    </div>
+
+    <footer>Hosted via GitHub Pages</footer>
   </div>
 </body>
 </html>

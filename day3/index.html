@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day 3 · Ride Activity</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;700;900&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Unbounded', Arial, sans-serif;
+      background: radial-gradient(circle at 30% 20%, #1a1f2b, #0a0c0f);
+      color: #e8edf5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 900px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 900;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
+
+    .sub {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .card {
+      background: #11151d;
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 24px;
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(212,146,42,0.15), transparent);
+      opacity: 0.2;
+    }
+
+    .embed-wrap {
+      margin-top: 20px;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 18px;
+      background: #d4922a;
+      color: #000;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    a.back:hover {
+      background: #f5c060;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Day 3</h1>
+    <div class="sub">Strava Activity · Ride recap</div>
+
+    <div class="card">
+      <div class="embed-wrap">
+        <div class="strava-embed-placeholder"
+             data-embed-type="activity"
+             data-embed-id="18159949628"
+             data-style="standard"
+             data-from-embed="false"
+             data-token="Jmsb15iU4z9TBm06aaSrKrxNaINEtJI9CpZx8-Ppkig">
+        </div>
+      </div>
+    </div>
+
+    <a href="../" class="back">← BACK</a>
+  </div>
+
+  <script src="https://strava-embeds.com/embed.js"></script>
+</body>
+</html>
