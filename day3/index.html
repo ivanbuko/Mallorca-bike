@@ -30,13 +30,12 @@
       font-size: 42px;
       font-weight: 900;
       margin-bottom: 10px;
-      letter-spacing: -1px;
     }
 
     .sub {
       font-size: 14px;
       color: #777;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       font-style: italic;
     }
 
@@ -47,16 +46,25 @@
       position: relative;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent, rgba(212,146,42,0.15), transparent);
-      opacity: 0.2;
-    }
-
     .embed-wrap {
       margin-top: 20px;
+    }
+
+    /* FIXED STRAVA BUTTON */
+    .strava-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #fc4c02;
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .strava-btn:hover {
+      background: #ff6a2a;
     }
 
     a.back {
@@ -90,6 +98,12 @@
              data-from-embed="false"
              data-token="Jmsb15iU4z9TBm06aaSrKrxNaINEtJI9CpZx8-Ppkig">
         </div>
+
+        <!-- FIXED BUTTON -->
+        <a href="https://www.strava.com/activities/18159949628" target="_blank" class="strava-btn">
+          VIEW ON STRAVA →
+        </a>
+
       </div>
     </div>
 
